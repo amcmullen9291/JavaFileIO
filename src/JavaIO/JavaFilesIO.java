@@ -10,6 +10,7 @@ public class JavaFilesIO {
         try {
             BufferedWriter fileWriter = new BufferedWriter(new FileWriter("JavaFile.txt"));
             fileWriter.write("This input is from JavaFiles.IO.java");
+            fileWriter.close();
         }catch(IOException e ){
             e.printStackTrace();
         }
