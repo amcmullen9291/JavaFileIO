@@ -11,6 +11,6 @@ public class EncryptedText {
 
     }
 
-    //receive encoded message here and System.out.print the value
+    //receive encoded message here and System.out.print the decrypted value
 
 }
