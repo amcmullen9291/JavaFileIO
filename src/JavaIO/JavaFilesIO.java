@@ -9,7 +9,6 @@ public class JavaFilesIO {
     static String message2 = "This text is also from JavaFilesIO.java";
 
     public static void main(String[] args) {
-
         try {
             BufferedWriter fileWriter = new BufferedWriter(new FileWriter("JavaFile.txt"));
             fileWriter.write(message);
@@ -19,5 +18,7 @@ public class JavaFilesIO {
         }catch(IOException e ){
             e.printStackTrace();
         }
+
+        //add instructions to encrypt message here
     }
 }

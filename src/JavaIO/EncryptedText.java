@@ -1,7 +1,5 @@
 package JavaIO;
 
-import org.w3c.dom.ls.LSOutput;
-
 public class EncryptedText {
 
     static JavaFilesIO hiddenMessage;
@@ -12,5 +10,7 @@ public class EncryptedText {
         System.out.println(hiddenMessage.message2);
 
     }
+
+    //receive encoded message here and System.out.print the value
 
 }
