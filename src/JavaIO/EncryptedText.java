@@ -42,12 +42,21 @@ public class EncryptedText {
             }
             BufferedReader FileReader2 = new BufferedReader(new FileReader("JavaFile.txt"));
 
-            String lastLine= null;
-            String nextLine;
+//            String lastLine= null;
+
+            String nextLine = "";
             while((nextLine = FileReader2.readLine()) != null) {
-                lastLine = nextLine;
+                char[] lastLine = nextLine.toCharArray();
+                char[] decoded = new char[nextLine.length()];
+//                lastLine = nextLine;
+                for(int x=0; x<lastLine.length; x++){
+                    char m = lastLine[x];
+                    m-=1;
+                    decoded[x] = m;
+                }
+                System.out.println(decoded);
             }
-            System.out.println(lastLine);
+//            System.out.println(decoded);
                 FileReader.close();
                 FileReader2.close();
 
