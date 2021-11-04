@@ -8,7 +8,7 @@ public class EncryptedText {
 
     static JavaFilesIO hiddenMessage;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
 
 //        char[] yourMessage = new char[hiddenMessage.input1.length];
 //        String text = hiddenMessage.input1;
@@ -22,11 +22,11 @@ public class EncryptedText {
 
 //        String reversedReverseMessage = String.valueOf(hiddenMessage.input1);
 //        StringBuilder input2 = new StringBuilder();
-
-        // append a string into StringBuilder input1
+//
+//         append a string into StringBuilder input1
 //        input2.append(reversedReverseMessage);
-
-        // reverse StringBuilder input1
+//
+//         reverse StringBuilder input1
 //        input2.reverse();
 
         try{
@@ -35,26 +35,27 @@ public class EncryptedText {
             String line = "";
             int s = 1;
             while ((line = FileReader.readLine()) != null) {
-                if(s<3) {
-                    System.out.println(line);
-                    sb.append(line);
+                while(s<=2) {
+//                    System.out.println(line);
+//                    sb.append(line);
                     sb.append('\n');
+//                    System.out.println(line);
+                    s++;
                 }
+                sb.append(line);
+                    System.out.println(line);
             }
-            StringBuilder reversedReverseMessage = JavaFilesIO.input1;
-            StringBuilder input = new StringBuilder();
 
-        input.append("end of text.");
+//            StringBuilder reversedReverseMessage = JavaFilesIO.input1;
+//            StringBuilder input = new StringBuilder();
 
-            System.out.println(input);
+//        input.append("end of text.");
+
+//            System.out.println(input);
  //note just turn the BufferedReader text into a char[]
         }catch(IOException e){
             e.printStackTrace();
         }
-
-
-
-
     }
 
     //receive encoded message here and System.out.print the decrypted value
