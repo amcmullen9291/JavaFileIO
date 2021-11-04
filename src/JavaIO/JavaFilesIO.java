@@ -32,13 +32,10 @@ public class JavaFilesIO {
             newOriginalMessage[i] = c;
         }
         String reverseMessage = String. valueOf(newOriginalMessage);
-//        StringBuilder
-                input1 = new StringBuilder();
+        input1 = new StringBuilder();
 
-        // append a string into StringBuilder input1
         input1.append(reverseMessage);
 
-        // reverse StringBuilder input1
         input1.reverse();
 
 
@@ -51,14 +48,10 @@ public class JavaFilesIO {
             fileWriter.write("------------------------------");
             fileWriter.write(System.getProperty( "line.separator" ));
             fileWriter.write(newOriginalMessage);
-//            fileWriter.write(System.getProperty( "line.separator" ));
-//            fileWriter.write(String.valueOf(input1));
-
             fileWriter.close();
         }catch(IOException e ){
             e.printStackTrace();
         }
 
-        //add instructions to encrypt message here
     }
 }
