@@ -28,36 +28,34 @@ public class EncryptedText {
 //
 //         reverse StringBuilder input1
 //        input2.reverse();
-
+        int lineNumber = 1;
         try{
             StringBuilder sb = new StringBuilder();
             BufferedReader FileReader = new BufferedReader(new FileReader("JavaFile.txt"));
-            String line = "";
-            int s = 1;
+            String line;
             while ((line = FileReader.readLine()) != null) {
-                while(s<=2) {
-//                    System.out.println(line);
-//                    sb.append(line);
-                    sb.append('\n');
-//                    System.out.println(line);
-                    s++;
-                }
-                sb.append(line);
+                if(lineNumber <4) {
+                    sb.append(line);
                     System.out.println(line);
+                    lineNumber++;
+                }
             }
+            BufferedReader FileReader2 = new BufferedReader(new FileReader("JavaFile.txt"));
 
-//            StringBuilder reversedReverseMessage = JavaFilesIO.input1;
-//            StringBuilder input = new StringBuilder();
+            String lastLine= null;
+            String nextLine;
+            while((nextLine = FileReader2.readLine()) != null) {
+                lastLine = nextLine;
+            }
+            System.out.println(lastLine);
+                FileReader.close();
+                FileReader2.close();
 
-//        input.append("end of text.");
-
-//            System.out.println(input);
+            System.out.println("End of message.");
  //note just turn the BufferedReader text into a char[]
         }catch(IOException e){
             e.printStackTrace();
         }
     }
-
-    //receive encoded message here and System.out.print the decrypted value
 
 }
