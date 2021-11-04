@@ -1,4 +1,6 @@
-This input is from JavaFilesIO.java15
-This text is also from JavaFilesIO.java87
+This input is from JavaFilesIO.java99
+This text is also from JavaFilesIO.java97
 ------------------------------
-I just want to see how long I can make this message without declaring multiple lines.
+Ifmmp/
+/pmmfI
+Hello.
