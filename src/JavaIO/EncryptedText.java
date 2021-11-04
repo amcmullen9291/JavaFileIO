@@ -9,25 +9,6 @@ public class EncryptedText {
     static JavaFilesIO hiddenMessage;
 
     public static void main(String[] args) throws FileNotFoundException {
-
-//        char[] yourMessage = new char[hiddenMessage.input1.length];
-//        String text = hiddenMessage.input1;
-//        char[] newOriginalMessage = new char[originalMessage.length];
-//        for(int i=0; i<originalMessage.length; i++){
-//            char c = originalMessage[i];
-//            c+=1;
-//            newOriginalMessage[i] = c;
-//        }
-
-
-//        String reversedReverseMessage = String.valueOf(hiddenMessage.input1);
-//        StringBuilder input2 = new StringBuilder();
-//
-//         append a string into StringBuilder input1
-//        input2.append(reversedReverseMessage);
-//
-//         reverse StringBuilder input1
-//        input2.reverse();
         int lineNumber = 1;
         try{
             StringBuilder sb = new StringBuilder();
@@ -56,12 +37,10 @@ public class EncryptedText {
                 }
                 System.out.println(decoded);
             }
-//            System.out.println(decoded);
                 FileReader.close();
                 FileReader2.close();
 
             System.out.println("End of message.");
- //note just turn the BufferedReader text into a char[]
         }catch(IOException e){
             e.printStackTrace();
         }
