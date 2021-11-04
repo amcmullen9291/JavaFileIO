@@ -3,13 +3,16 @@ package JavaIO;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.Collections;
+//import java.util.Arrays;
+//import java.util.Collections;
 import java.util.Scanner;
 
 public class JavaFilesIO {
     static String message = "This input is from JavaFilesIO.java";
     static String message2 = "This text is also from JavaFilesIO.java";
+    static String safeguard1;
+    static String safeguard2;
+    static StringBuilder input1;
 
     public static void main(String[] args) {
         System.out.println("Double digit key");
@@ -29,7 +32,8 @@ public class JavaFilesIO {
             newOriginalMessage[i] = c;
         }
         String reverseMessage = String. valueOf(newOriginalMessage);
-        StringBuilder input1 = new StringBuilder();
+//        StringBuilder
+                input1 = new StringBuilder();
 
         // append a string into StringBuilder input1
         input1.append(reverseMessage);
@@ -49,11 +53,11 @@ public class JavaFilesIO {
             fileWriter.write(newOriginalMessage);
             fileWriter.write(System.getProperty( "line.separator" ));
             fileWriter.write(String.valueOf(input1));
-
+            safeguard1 = message+firstResponse;
+            safeguard2 = message2+secondResponse;
             // temp original message below for reference
             fileWriter.write(System.getProperty( "line.separator" ));
             fileWriter.write(originalMessage);
-
 
             fileWriter.close();
         }catch(IOException e ){

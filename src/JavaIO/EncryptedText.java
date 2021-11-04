@@ -1,13 +1,54 @@
 package JavaIO;
 
+import javax.crypto.Cipher;
+import javax.crypto.CipherInputStream;
+import java.io.*;
+
 public class EncryptedText {
 
     static JavaFilesIO hiddenMessage;
 
     public static void main(String[] args) {
-        System.out.println(hiddenMessage.message);
-        System.out.println();
-        System.out.println(hiddenMessage.message2);
+
+//        char[] yourMessage = new char[hiddenMessage.input1.length];
+//        String text = hiddenMessage.input1;
+//        char[] newOriginalMessage = new char[originalMessage.length];
+//        for(int i=0; i<originalMessage.length; i++){
+//            char c = originalMessage[i];
+//            c+=1;
+//            newOriginalMessage[i] = c;
+//        }
+
+
+//        String reversedReverseMessage = String.valueOf(hiddenMessage.input1);
+//        StringBuilder input2 = new StringBuilder();
+
+        // append a string into StringBuilder input1
+//        input2.append(reversedReverseMessage);
+
+        // reverse StringBuilder input1
+//        input2.reverse();
+//        System.out.println(hiddenMessage.message);
+//        System.out.println();
+//        System.out.println(hiddenMessage.message2);
+//        System.out.println();
+
+        try{
+            StringBuilder sb = new StringBuilder();
+            BufferedReader FileReader = new BufferedReader(new FileReader("JavaFile.txt"));
+            String line = "";
+            while ((line = FileReader.readLine()) != null) {
+                System.out.println(line);
+                sb.append(line);
+                sb.append('\n');
+            }
+            System.out.println(FileReader.readLine());
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+
+
+
 
     }
 
