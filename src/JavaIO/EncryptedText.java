@@ -28,10 +28,6 @@ public class EncryptedText {
 
         // reverse StringBuilder input1
 //        input2.reverse();
-//        System.out.println(hiddenMessage.message);
-//        System.out.println();
-//        System.out.println(hiddenMessage.message2);
-//        System.out.println();
 
         try{
             StringBuilder sb = new StringBuilder();
