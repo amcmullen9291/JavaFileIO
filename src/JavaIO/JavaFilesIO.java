@@ -51,13 +51,8 @@ public class JavaFilesIO {
             fileWriter.write("------------------------------");
             fileWriter.write(System.getProperty( "line.separator" ));
             fileWriter.write(newOriginalMessage);
-            fileWriter.write(System.getProperty( "line.separator" ));
-            fileWriter.write(String.valueOf(input1));
-            safeguard1 = message+firstResponse;
-            safeguard2 = message2+secondResponse;
-            // temp original message below for reference
-            fileWriter.write(System.getProperty( "line.separator" ));
-            fileWriter.write(originalMessage);
+//            fileWriter.write(System.getProperty( "line.separator" ));
+//            fileWriter.write(String.valueOf(input1));
 
             fileWriter.close();
         }catch(IOException e ){

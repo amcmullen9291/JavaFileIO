@@ -37,12 +37,21 @@ public class EncryptedText {
             StringBuilder sb = new StringBuilder();
             BufferedReader FileReader = new BufferedReader(new FileReader("JavaFile.txt"));
             String line = "";
+            int s = 1;
             while ((line = FileReader.readLine()) != null) {
-                System.out.println(line);
-                sb.append(line);
-                sb.append('\n');
+                if(s<3) {
+                    System.out.println(line);
+                    sb.append(line);
+                    sb.append('\n');
+                }
             }
-            System.out.println(FileReader.readLine());
+            StringBuilder reversedReverseMessage = JavaFilesIO.input1;
+            StringBuilder input = new StringBuilder();
+
+        input.append("end of text.");
+
+            System.out.println(input);
+ //note just turn the BufferedReader text into a char[]
         }catch(IOException e){
             e.printStackTrace();
         }
